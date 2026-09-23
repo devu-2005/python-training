@@ -1,0 +1,19 @@
+r=int(input("enter the number of rats:"))
+unit=int(input("enter food needed by the rat:"))
+n=int(input("enter number of houses:"))
+arr=list(map(int,input("enter food in each houses").split()))
+food=r*unit
+total=0
+houses=0
+if len(arr)==0:
+  print(-1)
+else:
+    for i in range(n):
+      total=total + arr[i]
+      houses=houses+1
+      if total>=food:
+        break
+    if total<food:
+      print(0)
+    else:
+      print(houses)
